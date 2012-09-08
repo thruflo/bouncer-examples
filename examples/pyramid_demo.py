@@ -56,8 +56,7 @@ def index_view(request):
         'redirect_uri': request.route_url('callback'),
         'response_type': 'code'
     }
-    endpoint = AUTHORIZE_ENDPOINT
-    login_url = '{0}?{1}'.format(endpoint, urlencode(params))
+    login_url = '{0}?{1}'.format(AUTHORIZE_ENDPOINT, urlencode(params))
     
     # Render a hyperlink.
     markup = u"""
