@@ -1,5 +1,10 @@
 """`Pyramid`_ web application that uses `Bouncer`_ as its authentication system.
   
+  If necessary, install the dependencies with::
+  
+      pip install pyramid
+      pip install requests
+  
   Provide `BOUNCER_CLIENT_ID` AND `BOUNCER_CLIENT_SECRET` as environment
   variables and then run with `python pyramid_demo.py`, e.g.::
   
@@ -120,7 +125,7 @@ def user_view(request):
 
 
 def app_factory():
-    """Create a Pyramid app using the OS environment variable settings and two"""
+    """Create a Pyramid app using the OS environment variable settings."""
     
     # Parse the client credentials from the OS environment.
     client_id = os.environ.get('BOUNCER_CLIENT_ID')
